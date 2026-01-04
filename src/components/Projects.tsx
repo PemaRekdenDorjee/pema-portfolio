@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github, Layers } from 'lucide-react';
+import { useState } from 'react';
+import { ExternalLink, Github} from 'lucide-react';
 import { projectWeb, projectNetwork, projectEdu } from '../images';
 
 const Projects = () => {

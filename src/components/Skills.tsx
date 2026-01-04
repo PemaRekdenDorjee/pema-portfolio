@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code, Server, Wifi, PenTool, Database, Terminal } from 'lucide-react';
+
+import { Code, Wifi, PenTool, Terminal } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [

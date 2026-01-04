@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { profileImg } from '../images';
 import { Award, BookOpen, Cpu, MapPin } from 'lucide-react';
 

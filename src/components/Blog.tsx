@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, Tag, Clock } from 'lucide-react';
 import { blog1, blog2 } from '../images';
 

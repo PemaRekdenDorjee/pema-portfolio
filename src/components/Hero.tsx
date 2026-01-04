@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { heroBg } from '../images';
 

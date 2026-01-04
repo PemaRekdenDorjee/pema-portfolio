@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Book, Users, Lightbulb, MonitorPlay } from 'lucide-react';
 import { teachingImg } from '../images';
 
