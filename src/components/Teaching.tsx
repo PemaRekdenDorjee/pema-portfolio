@@ -25,7 +25,7 @@ const Teaching = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-slate-900 dark:text-white">TVET Program Leadership</h3>
+                  <h3 className="text-lg font-medium text-slate-900 dark:text-white">TVET Program </h3>
                   <p className="mt-2 text-base text-slate-500 dark:text-slate-400">
                     Guiding students from Class IX to XII through rigorous technical vocational education, focusing on employability and industry readiness.
                   </p>
@@ -69,7 +69,7 @@ const Teaching = () => {
           </div>
 
           <div className="order-1 lg:order-2 mb-12 lg:mb-0">
-             <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+             <div className="relative rounded-2xl overflow-hidden shadow-2xl ">
                 <div className="absolute inset-0 bg-indigo-600/20 mix-blend-multiply"></div>
                 <img 
                   src={teachingImg} 
