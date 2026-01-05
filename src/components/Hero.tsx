@@ -1,8 +1,17 @@
-
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { heroBg } from '../images';
-
+import { downloadCV } from '../utilits/cvdownload';
+import { useTypewriter } from '../utilits/typeWriter';
 const Hero = () => {
+  // Using the typewriter hook for  introduction
+  const { text: typedIntro, showCursor } = useTypewriter(
+    "I'm Pema Dorji Sherpa",
+    {
+      speed: 80,
+      delay: 500,
+      loop: true,
+    }
+  );
   return (
     <div className="relative bg-white dark:bg-slate-950 pt-16 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -23,7 +32,15 @@ const Hero = () => {
             </div>
             <h1>
               <span className="block text-sm font-semibold tracking-wide text-slate-500 dark:text-slate-400 uppercase sm:text-base lg:text-sm xl:text-base">
-                Hi, I'm Pema Dorji Sherpa
+                Hi,{" "}
+                <span className="inline-block">
+                  {typedIntro}
+                  <span 
+                    className={`inline-block w-[2px] h-4 bg-primary-600 ml-0.5 ${
+                      showCursor ? 'opacity-100' : 'opacity-0'
+                    } transition-opacity duration-100`}
+                  />
+                </span>
               </span>
               <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl text-slate-900 dark:text-white">
                 <span className="block">Software & Network</span>
@@ -36,9 +53,10 @@ const Hero = () => {
             
             <div className="mt-5 flex flex-wrap gap-2 text-sm font-medium text-slate-600 dark:text-slate-400">
               <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">PHP & MySQL</span>
+              <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">Javascript</span>
               <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">Linux Admin</span>
               <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">Networking</span>
-              <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">Zend Framework</span>
+              <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">Server</span>
             </div>
 
             <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
@@ -53,10 +71,25 @@ const Hero = () => {
               </div>
               
               <div className="mt-8 flex items-center gap-6 sm:justify-center lg:justify-start text-slate-400">
-                <a href="#" className="hover:text-slate-600 dark:hover:text-slate-200 transition-colors"><Github className="h-6 w-6" /></a>
-                <a href="#" className="hover:text-slate-600 dark:hover:text-slate-200 transition-colors"><Linkedin className="h-6 w-6" /></a>
+                <a 
+                  href="https://github.com/PemaRekdenDorjee" 
+                  target='_blank'
+                  className="hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                >
+                  <Github className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/pemadorjisherpa" 
+                  target='_blank'
+                  className="hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
                 <a href="mailto:pemarekdendorjee@gmail.com" className="hover:text-slate-600 dark:hover:text-slate-200 transition-colors"><Mail className="h-6 w-6" /></a>
-                <button className="flex items-center text-sm font-medium hover:text-primary-500 transition-colors">
+                <button 
+                  onClick={downloadCV}
+                  className="flex items-center text-sm font-medium hover:text-primary-500 transition-colors"
+                >
                   <Download className="h-4 w-4 mr-1" /> Download Resume
                 </button>
               </div>

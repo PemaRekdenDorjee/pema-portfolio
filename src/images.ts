@@ -1,4 +1,4 @@
-export const heroBg = "images/hero-network.jpg";
+export const heroBg = "images/teaching.jpg";
 export const profileImg = "images/pemadorji-profile.jpg";
 export const teachingImg = "images/class-teacher.jpg";
 export const projectWeb = "images/project-webapp.jpg";
