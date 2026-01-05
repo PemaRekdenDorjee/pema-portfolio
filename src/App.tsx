@@ -9,6 +9,7 @@ import Teaching from './components/Teaching';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './utilits/scrollToTop';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -37,6 +38,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

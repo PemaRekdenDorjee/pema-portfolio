@@ -85,7 +85,12 @@ const Hero = () => {
                 >
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a href="mailto:pemarekdendorjee@gmail.com" className="hover:text-slate-600 dark:hover:text-slate-200 transition-colors"><Mail className="h-6 w-6" /></a>
+                <a 
+                  href="mailto:pemarekdendorjee@gmail.com" 
+                  className="hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                  >
+                  <Mail className="h-6 w-6" />
+                </a>
                 <button 
                   onClick={downloadCV}
                   className="flex items-center text-sm font-medium hover:text-primary-500 transition-colors"
